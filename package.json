@@ -1,0 +1,35 @@
+{
+  "name": "iartx-serverless-client",
+  "version": "0.1.0",
+  "description": "A React-based web client for an online art gallery.",
+  "main": "index.js",
+  "repository": "git@github.com:pjamieson/iartx-serverless-client.git",
+  "author": "Patrick Jamieson",
+  "license": "MIT",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^1.19.0",
+    "aws-sdk": "^2.95.0",
+    "bootstrap": "^3.3.7",
+    "crypto-js": "^3.1.9-1",
+    "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-transition-group": "^15.6.0",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "^1.0.11"
+  },
+  "scripts": {
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "yarn run build-css && node-sass src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "yarn run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
