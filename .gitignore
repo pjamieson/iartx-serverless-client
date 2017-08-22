@@ -22,3 +22,6 @@ yarn-error.log*
 
 # AWS IDs
 /src/awsconfig.js
+
+# With sass as source, don't need generated css
+src/**/*.css

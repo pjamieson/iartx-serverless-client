@@ -15,9 +15,9 @@ TODO: Upgrade to Bootstrap 4, when released (in first beta in Aug 2017)
 
 ## Using Amazon Cognoto for Signup, Login, and Permissions Management
 
-The initial code for this project followed the excellent [Serverless Stack Tutorial](https://github.com/AnomalyInnovations/serverless-stack-com) by AnomalyInnovations. Among other things, that tutorial demonstrates how to leverage the Amazon Cognito service as a backend for user signup, signup confirmation, login, and logout. Following full implementation of the tutorial code, the following modifications/extensions were made:
+The initial code for this project followed the excellent [Serverless Stack Tutorial](https://github.com/AnomalyInnovations/serverless-stack-com) by AnomalyInnovations. Among other things, that tutorial demonstrates how to leverage the Amazon Cognito service as a backend for user signup, signup confirmation, login, and logout. Following full implementation of the tutorial code, the following modifications and extensions were made:
 
-1. Added Redux for state management, moving auth-related state and methods from the `App`, `Signup`, and `Login` components into new `reducers/AuthReducer.js` and `actions/AuthActions.js` files
+1. Implemented Redux for state management, moving auth-related state and methods from the `App`, `Signup`, and `Login` components into new `reducers/AuthReducer.js` and `actions/AuthActions.js` files
 
 2. Extracted the `NavBar` from the `App` component, making is a separate component
 
