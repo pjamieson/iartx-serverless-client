@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { ListGroup, ListGroupItem, PageHeader } from 'react-bootstrap';
 
-import { invokeApig } from '../libs/awsLib';
+//import { invokeApig } from '../libs/awsLib';
 import './Home.css';
 
 class Home extends Component {
@@ -35,7 +35,7 @@ class Home extends Component {
   }
 
   paintings() {
-    return invokeApig({ path: '/paintings' }, this.props.userToken);
+//    return invokeApig({ path: '/paintings' }, this.props.userToken);
   }
 
   renderPaintingsList(paintings) {
@@ -84,9 +84,10 @@ class Home extends Component {
   }
 
   render() {
+    //console.log('Home props: ', this.props);
     return (
       <div className="Home">
-        { this.props.userToken === null
+        { !this.props.userToken
           ? this.renderLander()
           : this.renderPaintings() }
       </div>

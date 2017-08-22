@@ -15,6 +15,7 @@ function querystring(name, url = window.location.href) {
 
 export default ({ component: C, props: cProps, ...rest }) => {
   const redirect = querystring('redirect');
+  //console.log('cProps: ', cProps);
   return (
     <Route {...rest} render={props => (
       cProps.userToken === null
